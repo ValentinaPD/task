@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 namespace Tasker
 {
-    abstract class TaskPanel:Panel
+    class TaskPanel:Panel
     {
-        abstract public string GetMessage();
-        abstract public string GetTitle();
         
 
     }
