@@ -16,7 +16,7 @@ namespace Tasker
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainFm());
+            Application.Run(new Form1());
         }
     }
 }
