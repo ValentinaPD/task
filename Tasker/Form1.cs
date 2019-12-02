@@ -24,11 +24,18 @@ namespace Tasker
             TaskPanel ts=new TaskPanel("njdb","cnds");
             TaskPanel ts2 = new TaskPanel("njdb", "cnds");
             TaskPanel ts3 = new TaskPanel("njdb", "cnds");
-            
+            TaskPanel ts4 = new TaskPanel("njdb", "cnds");
+            TaskPanel ts5 = new TaskPanel("njdb", "cnds");
+            TaskPanel ts6 = new TaskPanel("njdb", "cnds");
+            TaskPanel ts7 = new TaskPanel("njdb", "cnds");
+            TaskPanel ts8 = new TaskPanel("njdb", "cnds");
+            TaskPanel ts9 = new TaskPanel("njdb", "cnds");
+            TaskPanel ts10 = new TaskPanel("njdb", "cnds");
+            TaskPanel ts11 = new TaskPanel("njdb", "cnds");
             ts.BackColor = Color.Aqua;
             ts2.BackColor = Color.Red;
             ts3.BackColor = Color.Green;
-            TaskPanel[] tt = new TaskPanel[]{ts,ts2,ts3 };
+            TaskPanel[] tt = new TaskPanel[]{ts,ts2,ts3, ts4, ts5, ts6, ts7};
             Taskers task = new Taskers(tt);
             Controls.Add(task);
             
