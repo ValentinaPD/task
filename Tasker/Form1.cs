@@ -19,9 +19,18 @@ namespace Tasker
 
         private void button1_Click(object sender, EventArgs e)
         {
-            TaskPanel ts=new TaskPanel("njdb","cnds",200,200);
+            //MessageBox.Show(DateTime.Now.ToString());
+            
+            TaskPanel ts=new TaskPanel("njdb","cnds");
+            TaskPanel ts2 = new TaskPanel("njdb", "cnds");
+            TaskPanel ts3 = new TaskPanel("njdb", "cnds");
+            
             ts.BackColor = Color.Aqua;
-            Controls.Add(ts);
+            ts2.BackColor = Color.Red;
+            ts3.BackColor = Color.Green;
+            TaskPanel[] tt = new TaskPanel[]{ts,ts2,ts3 };
+            Taskers task = new Taskers(tt);
+            Controls.Add(task);
             
         }
     }

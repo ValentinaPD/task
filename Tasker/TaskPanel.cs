@@ -1,32 +1,57 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 namespace Tasker
 {
-    class TaskPanel:Panel
+   
+        partial class TaskPanel : Panel
     {
         private string caption;
         private string text;
-        private int height;
-        private int width;
-        
-        public TaskPanel(string caption,string text,int height,int width)
+       
+        public TaskPanel(string caption,string text)
         {
+
             this.text = text;
-            this.caption = caption;
-            this.height = height;
-            this.width = width;
+            this.caption = caption;           
+            this.Dock = DockStyle.Top;
+
             Label captionlabel = new Label();
             Label textlabel = new Label();
-            textlabel.Top = 20;
+            Label datalb = new Label();
+            
             captionlabel.Text = caption;
             textlabel.Text = text;
-            Controls.Add(captionlabel);
-            Controls.Add(textlabel);
+            datalb.Text = DateTime.Now.ToString();
+            textlabel.Top = 20;
+            datalb.Top= 70;
+            
+
+            
+            this.Controls.Add(captionlabel);
+            this.Controls.Add(textlabel);
+            this.Controls.Add(datalb);
         }      
 
     }
 }
+/*
+     struct PanelStyle
+{
+    Color PanelColor;
+    public void F(TaskPanel tp, Color color)
+    {
+        tp.BackColor = color;
+    }
+}
+
+    
+        public void MyNewStyle()
+        {
+            this.BackColor = Color.Red;
+        }
+*/
