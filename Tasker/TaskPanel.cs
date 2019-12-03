@@ -12,14 +12,18 @@ namespace Tasker
     {
         private string caption;
         private string text;
-       
+        //void TaskPanel_mousemove(object sender, EventArgs e)
+        //{
+        //    this.BackColor = Color.Orange;
+        //}
+     
         public TaskPanel(string caption,string text)
         {
-
+           // this.MouseHover += new EventHandler(TaskPanel_mousemove);
             this.text = text;
             this.caption = caption;           
             this.Dock = DockStyle.Top;
-
+            
             Label captionlabel = new Label();
             Label textlabel = new Label();
             Label datalb = new Label();
