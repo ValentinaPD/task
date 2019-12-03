@@ -7,19 +7,22 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 namespace Tasker
 {
-   
-        partial class TaskPanel : Panel
+
+    partial class TaskPanel : Panel
     {
         private string caption;
         private string text;
-        //void TaskPanel_mousemove(object sender, EventArgs e)
-        //{
-        //    this.BackColor = Color.Orange;
-        //}
-     
+       // public event EventHandler SizeChanged;
+            
+        void TaskPanel_SizeChanged(object sender, EventArgs e)
+        {
+            this.Font = new System.Drawing.Font("Times New Roman", (this.Width) / 16);
+            //this.Height = this.Height + 10;
+        }
+
         public TaskPanel(string caption,string text)
         {
-           // this.MouseHover += new EventHandler(TaskPanel_mousemove);
+            this.SizeChanged += new EventHandler(TaskPanel_SizeChanged);
             this.text = text;
             this.caption = caption;           
             this.Dock = DockStyle.Top;
