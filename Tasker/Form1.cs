@@ -35,7 +35,7 @@ namespace Tasker
             ts.BackColor = Color.Aqua;
             ts2.BackColor = Color.Red;
             ts3.BackColor = Color.Green;
-            TaskPanel[] tt = new TaskPanel[]{ts,ts2,ts3, ts4, ts5, ts6, ts7};
+            TaskPanel[] tt = new TaskPanel[]{ts,ts2,ts3, ts4, ts5, ts6, ts7,ts8,ts9,ts10,ts11};
             Taskers task = new Taskers(tt);
             Controls.Add(task);
             
